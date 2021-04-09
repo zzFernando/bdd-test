@@ -26,7 +26,7 @@ def test_get_locations_for_us_90023_check_content_type_equals_json():
      response = requests.get("http://api.zippopotam.us/us/90023")
 
      #validation 
-     assert response.status_code == 200
+     assert response.headers["Content-Type"] == "application/json"
      
      #prints
      json_response_content = response.content
