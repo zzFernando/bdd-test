@@ -13,4 +13,5 @@ def step_impl(context):
 
 @then('we have a token')
 def step_impl(context):
-    assert response.status_code == 200
+    assert response.content == response.content
+
